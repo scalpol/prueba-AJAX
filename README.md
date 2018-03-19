@@ -1,24 +1,5 @@
-# README
+Link a Heroku:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://whispering-crag-31797.herokuapp.com/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Recordar que el ultimo commit fue 1 hora despues de la hora de finalizacion, pero porque llegue 4 horas tarde despues de el accidente en bicicleta. Saludos!
