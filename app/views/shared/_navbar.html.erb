@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="<%= root_path %>">Reclamos.com</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <% if user_signed_in? %>
+      <a class="nav-item nav-link" data-method="delete" href="<%= destroy_user_session_path %>">Cerrar sesion</a>
+      <% else %>
+        <a class="nav-item nav-link" href="<%= new_user_registration_path %>">Registrarse</a>
+        <a class="nav-item nav-link" href="<%= new_user_session_path %>">Iniciar sesion</a>
+      <% end %>
+    </div>
+  </div>
+</nav>
