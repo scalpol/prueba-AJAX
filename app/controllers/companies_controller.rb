@@ -7,8 +7,16 @@ class CompaniesController < ApplicationController
   end
 
   def show
-    @company = Company.find(params[:id])
     @complaint = Complaint.new
+  end
+
+  def modal_edit
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    @company = Company.find(params[:id])
+    @company.update(name: params[:company][:name])
   end
 
   def create

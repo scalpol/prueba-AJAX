@@ -1,1 +1,1 @@
-$("#companies").append("<tr><td>" + "<%= link_to @company.name %>" + "</td><td>" + "<%= link_to 'borrar', company_path, method: :delete %>" + "</td></tr>");
+$("#companies").append("<tr><td>" + "<%= j link_to @company.name %>" + "</td><td>" + "<%= j link_to 'borrar', company_path(@company.id), method: :delete %>" + " " + "<%= j link_to 'editar', modal_edit_path(id: @company.id), remote: true %>" + "</td></tr>");
