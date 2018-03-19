@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
  before_action :authenticate_user!, only: :show
+ before_action :set_company, except: [:index, :create]
 
   def index
     @companies = Company.all
@@ -11,11 +12,9 @@ class CompaniesController < ApplicationController
   end
 
   def modal_edit
-    @company = Company.find(params[:id])
   end
 
   def update
-    @company = Company.find(params[:id])
     @company.update(name: params[:company][:name])
   end
 
@@ -25,7 +24,12 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
-    @company = Company.find(params[:id])
     @company.destroy
+  end
+
+  private
+
+  def set_company
+    @company = Company.find(params[:id])
   end
 end

@@ -25,3 +25,5 @@ end
     comment: Faker::Hacker.say_something_smart
   )
 end
+
+AdminUser.create!(email: 'claudio@claudio.com', password: '123456', password_confirmation: '123456') if Rails.env.development?
